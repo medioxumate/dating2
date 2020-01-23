@@ -28,5 +28,11 @@ $f3->route('GET /', function(){
     echo $view-> render('views/home.html');
 });
 
+//Form routes
+$f3->route('POST /form', function($f3) {
+    $view = new Template();
+    echo $view->render('views/form1.html');
+});
+
 //Run Fat-free
 $f3->run();
