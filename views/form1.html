@@ -1,0 +1,91 @@
+<!--
+ * Created in PhpStorm
+ * @author Brian Kiehn
+ * @date 1/22/2020
+ * @version 1.0
+ * form1.html
+ * GreenRiverDev
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!--custom style sheet-->
+    <link rel="stylesheet" href="styles/styles.css"/>
+
+    <title>Sign up</title>
+</head>
+<body>
+    <!--header-->
+    <header class ="container-fluid nav">
+        <nav>
+            <a class="text-uppercase navbar-header"><em>It's Round</em></a>
+            <a class="link" href="">link</a>
+            <a class="link" href="">link</a>
+            <a class="link" href="">link</a>
+            <a class="link" href="">link</a>
+        </nav>
+    </header>
+    <!--end header-->
+
+    <!-- main body -->
+    <section class ="container-fluid">
+        <form method ="Post" action ="#">
+            <div class ="card form-group">
+                <div class="card-header">
+                    <h1>Personal Information</h1>
+                </div><!--end card-header-->
+                <div class ="card-body">
+                <div class ="row">
+                    <div class ="col-6">
+                        <label>First Name</label>
+                        <input class = "form-control" type ="text" name ="fn" value ={{@fn}}>
+                    </div>
+                </div>
+                    <div class="row">
+                        <div class ="col-6">
+                            <label>Last Name</label>
+                            <input class = "form-control" type ="text" name ="ln" value ={{@ln}}>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <div class ="col-6">
+                        <label>Age</label>
+                        <input class = "form-control" type ="text" name ="age" value ={{@age}}>
+                    </div>
+                    </div>
+                    <div class ="row">
+                        <div class="col-6">
+                        <label>Gender:
+                            <input type ="radio" name ="g" id ="m" value="Male"><label for ="m">Male</label>
+                            <input type ="radio" name ="g" id ="f" value ="Female"><label for ="f">Female</label>
+                            <input type ="radio" name ="g" id ="b" value ="Both"><label for ="b">Both</label>
+                            <input type ="radio" name ="g" id ="o" value ="Other"><label for ="o">Other</label>
+                        </label>
+                        </div>
+                    </div>
+                    <div class ="row">
+                        <div class="col-6">
+                        <label>Phone Number</label>
+                        <input class = "form-control" type ="text" name ="ph" value ={{@ph}}>
+                        </div>
+                    </div>
+
+        <div class="row">
+            <div class="col-10"></div>
+            <div class ="col float-left">
+                <button type ="submit">Next</button>
+                <button type ="reset">Reset</button>
+            </div>
+        </div>
+                </div>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
