@@ -22,6 +22,18 @@ require_once('vendor/autoload.php');
 //Create an instance of the Base class
 $f3 = Base::instance();
 
+//State array
+$f3->set('states', array('Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado',
+    'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois',
+    'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland',
+    'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana',
+    'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York',
+    'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania',
+    'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah',
+    'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming',
+    'American Samoa', 'District of Columbia', 'Guam', 'Marshall Islands', 'Northern Mariana Islands',
+    'Palau', 'Puerto Rico', 'Virgin Islands'));
+
 //Define a default route
 $f3->route('GET /', function(){
     $view = new Template();
@@ -29,9 +41,14 @@ $f3->route('GET /', function(){
 });
 
 //Form routes
-$f3->route('POST /form', function($f3) {
+$f3->route('POST /sign-up', function($f3) {
     $view = new Template();
     echo $view->render('views/form1.html');
+});
+
+$f3->route('POST /profile', function($f3) {
+    $view = new Template();
+    echo $view->render('views/form2.html');
 });
 
 //Run Fat-free
