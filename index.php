@@ -53,11 +53,23 @@ $f3->route('POST /sign-up', function() {
 });
 
 $f3->route('POST /bio', function() {
+
+    $_SESSION ['fn'] = $_POST['fn'];
+    $_SESSION ['ln'] = $_POST['ln'];
+    $_SESSION ['age'] = $_POST['age'];
+    $_SESSION ['ph'] = $_POST['ph'];
+    $_SESSION ['g'] = $_POST['g'];
+
     $view = new Template();
     echo $view->render('views/form2.html');
 });
 
 $f3->route('POST /hobbies', function() {
+    $_SESSION ['em'] = $_POST['em'];
+    $_SESSION ['st'] = $_POST['st'];
+    $_SESSION ['sk'] = $_POST['sk'];
+    $_SESSION ['bio'] = $_POST['bio'];
+
     //display a views
     $view = new Template();
 
@@ -65,6 +77,10 @@ $f3->route('POST /hobbies', function() {
 });
 
 $f3->route('POST /profile', function() {
+    $_SESSION['in'] = $_POST['in'];
+    $_SESSION['out'] = $_POST['out'];
+
+
     //display a views
     $view = new Template();
 
